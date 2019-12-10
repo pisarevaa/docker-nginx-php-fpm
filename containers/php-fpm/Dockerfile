@@ -29,15 +29,9 @@ RUN apk --update add \
   php7-zip \
   && rm -rf /var/cache/apk/*
 
-# WORKDIR /var/www
-# RUN addgroup -u 1000 www-data
-# RUN chown -R www-data:www-data /var/www
-
 COPY php.ini /etc/php7/php.ini
 COPY opcache.ini /etc/php7/conf.d/00_opcache.ini
-# COPY php-fpm.conf /etc/php7/php-fpm.conf
 
 EXPOSE 9000
 
 CMD ["php-fpm7", "-F"]
-# CMD ["php-fpm7"]
