@@ -31,6 +31,7 @@ RUN apk --update add \
 
 COPY php.ini /etc/php7/php.ini
 COPY opcache.ini /etc/php7/conf.d/00_opcache.ini
+COPY www.conf /etc/php7/php-fpm.d/www.conf
 
 EXPOSE 9000
 
