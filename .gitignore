@@ -1,3 +1,1 @@
-containers/logs/nginx/*.log
-containers/logs/nginx/error.log
-containers/logs/nginx/access.log
+containers/logs
